@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?= $title ?? 'Admin WeluxShop' ?></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f43f5e', // rose-500
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100">
+    <div class="flex h-screen overflow-hidden">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white dark:bg-gray-900 shadow-md flex-shrink-0 hidden md:flex flex-col">
+            <div class="p-4 text-2xl font-bold text-rose-500">WeluxShop</div>
+            <nav class="mt-6 flex-1">
+                <a href="/admin" class="flex items-center px-4 py-3 hover:bg-rose-50 dark:hover:bg-gray-800">
+                    Dashboard
+                </a>
+                <a href="/admin/products" class="flex items-center px-4 py-3 hover:bg-rose-50 dark:hover:bg-gray-800">
+                    Produk
+                </a>
+                <a href="/admin/treatments" class="flex items-center px-4 py-3 hover:bg-rose-50 dark:hover:bg-gray-800">
+                    Treatment
+                </a>
+                <a href="/admin/doctors" class="flex items-center px-4 py-3 hover:bg-rose-50 dark:hover:bg-gray-800">
+                    Dokter
+                </a>
+                <a href="/admin/branches" class="flex items-center px-4 py-3 hover:bg-rose-50 dark:hover:bg-gray-800">
+                    Cabang
+                </a>
+                <a href="/admin/articles" class="flex items-center px-4 py-3 hover:bg-rose-50 dark:hover:bg-gray-800">
+                    Artikel
+                </a>
+                <a href="/admin/banners" class="flex items-center px-4 py-3 hover:bg-rose-50 dark:hover:bg-gray-800">
+                    Banner
+                </a>
+                <a href="/admin/promos" class="flex items-center px-4 py-3 hover:bg-rose-50 dark:hover:bg-gray-800">
+                    Promo
+                </a>
+                <a href="/admin/vouchers" class="flex items-center px-4 py-3 hover:bg-rose-50 dark:hover:bg-gray-800">
+                    Voucher
+                </a>
+                <a href="/admin/categories" class="flex items-center px-4 py-3 hover:bg-rose-50 dark:hover:bg-gray-800">
+                    Kategori
+                </a>
+                <a href="/admin/brands" class="flex items-center px-4 py-3 hover:bg-rose-50 dark:hover:bg-gray-800">
+                    Brand
+                </a>
+                <a href="/admin/customers" class="flex items-center px-4 py-3 hover:bg-rose-50 dark:hover:bg-gray-800">
+                    Customer
+                </a>
+                <a href="/admin/orders" class="flex items-center px-4 py-3 hover:bg-rose-50 dark:hover:bg-gray-800">
+                    Pesanan
+                </a>
+                <a href="/admin/bookings" class="flex items-center px-4 py-3 hover:bg-rose-50 dark:hover:bg-gray-800">
+                    Booking
+                </a>
+                <a href="/admin/reviews" class="flex items-center px-4 py-3 hover:bg-rose-50 dark:hover:bg-gray-800">
+                    Ulasan
+                </a>
+                <a href="/admin/faqs" class="flex items-center px-4 py-3 hover:bg-rose-50 dark:hover:bg-gray-800">
+                    FAQ
+                </a>
+                <a href="/admin/testimonials" class="flex items-center px-4 py-3 hover:bg-rose-50 dark:hover:bg-gray-800">
+                    Testimoni
+                </a>
+                <a href="/admin/settings" class="flex items-center px-4 py-3 hover:bg-rose-50 dark:hover:bg-gray-800">
+                    Pengaturan
+                </a>
+                <a href="/admin/backup" class="flex items-center px-4 py-3 hover:bg-rose-50 dark:hover:bg-gray-800">
+                    Backup
+                </a>
+                <a href="/admin/activity-logs" class="flex items-center px-4 py-3 hover:bg-rose-50 dark:hover:bg-gray-800">
+                    Log Aktivitas
+                </a>
+            </nav>
+            <div class="p-4 border-t dark:border-gray-700">
+                <a href="/logout" class="text-red-500">Logout</a>
+            </div>
+        </aside>
+        <!-- Main content -->
+        <main class="flex-1 overflow-y-auto p-6">
+            <?= $content ?>
+        </main>
+    </div>
+    <!-- Mobile sidebar toggle, etc. -->
+    <script src="/assets/js/admin.js"></script>
+</body>
+</html>
